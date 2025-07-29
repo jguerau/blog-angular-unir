@@ -1,0 +1,24 @@
+<div class="formulari">
+  <h2>Publicar nova notícia</h2>
+  <div class="error" *ngIf="error">{{ error }}</div>
+
+  <form (ngSubmit)="afegirNoticia()" #formNoticia="ngForm">
+    <input type="text" [(ngModel)]="novaNoticia.titol" name="titol" placeholder="Títol" required />
+    <input type="text" [(ngModel)]="novaNoticia.imatge" name="imatge" placeholder="URL imatge" required />
+    <textarea [(ngModel)]="novaNoticia.cos" name="cos" placeholder="Cos de la notícia" required></textarea>
+    <input type="date" [(ngModel)]="novaNoticia.data" name="data" required />
+    <button type="submit">Publicar</button>
+  </form>
+</div>
+
+<hr />
+
+<div class="llistat">
+  <h2>Llistat de notícies</h2>
+  <div class="noticia" *ngFor="let noticia of noticies">
+    <h3>{{ noticia.titol }}</h3>
+    <img [src]="noticia.imatge" alt="imatge noticia" />
+    <p>{{ noticia.cos }}</p>
+    <small>Publicat el: {{ noticia.data }}</small>
+  </div>
+</div>

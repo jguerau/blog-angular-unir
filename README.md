@@ -25,19 +25,14 @@ Crear una SPA en Angular que permita publicar noticias en un blog mediante un fo
    ```bash
    git clone https://github.com/jguerau/blog-angular-unir.git
    cd blog-angular-unir
-   ```
+   ``
 
-2. Instalar dependencias:
-   ```bash
-   npm install
-   ```
-
-3. Ejecutar la aplicación:
+2. Ejecutar la aplicación:
    ```bash
    ng serve
    ```
 
-4. Abrir el navegador en:
+3. Abrir el navegador en:
    ```
    http://localhost:4200
    ```

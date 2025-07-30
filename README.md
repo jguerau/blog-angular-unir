@@ -42,9 +42,6 @@ Crear una SPA en Angular que permita publicar noticias en un blog mediante un fo
    http://localhost:4200
    ```
 
-## 📸 Captura de pantalla
-
-_Añade aquí una imagen si quieres mostrar el resultado visual del blog._
 
 ## 📁 Estructura del proyecto
 

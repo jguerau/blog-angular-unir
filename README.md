@@ -1,60 +1,82 @@
-# Blog Angular UNIR
 
-Proyecto realizado como parte de la **Actividad 5** de la asignatura _Full Stack Developer_ del Máster de UNIR.
+# User CRUD Application - Angular 19
 
-## 📌 Objetivo
+Aplicación web desarrollada con Angular 19 que implementa operaciones CRUD (Create, Read, Update, Delete) conectándose a una API externa.
 
-Crear una SPA en Angular que permita publicar noticias en un blog mediante un formulario y visualizarlas en un listado.
+## Características
 
-## 🛠️ Tecnologías usadas
+- **Framework**: Angular 19 con standalone components
+- **API Externa**: https://peticiones.online/api/users
+- **Estilos**: Bootstrap 5 para diseño responsivo
+- **Formularios**: Reactive Forms con validaciones
+- **Routing**: Sistema de navegación completo
 
-- Angular 17
-- TypeScript
-- HTML5 + CSS3
+## Funcionalidades
 
-## 🧩 Funcionalidad
+- ✅ Listado de usuarios con paginación
+- ✅ Vista detalle de usuario individual
+- ✅ Crear nuevos usuarios
+- ✅ Editar usuarios existentes
+- ✅ Eliminar usuarios con confirmación
+- ✅ Validaciones de formularios
+- ✅ Manejo de estados de carga y errores
 
-- Formulario para introducir nuevas noticias
-- Validación de campos vacíos
-- Listado de noticias dinámico
-- Datos iniciales cargados desde un array
+## Requisitos
 
-## ▶️ Cómo ejecutar el proyecto
+- Node.js 18 o superior
+- Angular CLI 19
+- npm 9 o superior
+
+## Instalación
 
 1. Clonar el repositorio:
-   ```bash
-   git clone https://github.com/jguerau/blog-angular-unir.git
-   cd blog-angular-unir
-   ``
-
-2. Ejecutar la aplicación:
-   ```bash
-   ng serve
-   ```
-
-3. Abrir el navegador en:
-   ```
-   http://localhost:4200
-   ```
-
-
-## 📁 Estructura del proyecto
-
-```
-src/
-├── app/
-│   ├── blog/
-│   │   ├── blog.component.ts
-│   │   ├── blog.component.html
-│   │   └── blog.component.css
-│   ├── interfaces/
-│   │   └── noticia.ts
-│   ├── app.module.ts
-│   └── app.component.html
-├── index.html
-├── styles.css
+```bash
+git clone https://github.com/TU_USUARIO/user-crud-angular.git
+cd user-crud-angular
 ```
 
-## 📚 Autor
+2. Instalar dependencias:
+```bash
+npm install
+```
 
-Josep Garcia – [https://github.com/jguerau](https://github.com/jguerau)
+3. Ejecutar la aplicación:
+```bash
+ng serve
+```
+
+4. Abrir en el navegador: `http://localhost:4200`
+
+## Rutas de la aplicación
+
+- `/home` - Listado de usuarios
+- `/user/:id` - Detalle de usuario
+- `/newuser` - Crear nuevo usuario
+- `/updateuser/:id` - Editar usuario
+
+## Estructura del proyecto
+
+```
+src/app/
+├── interfaces/user.interface.ts    # Definición de tipos
+├── services/user.service.ts        # Comunicación con API
+├── pages/
+│   ├── home/                      # Listado de usuarios
+│   ├── user-detail/               # Detalle de usuario
+│   └── user-form/                 # Formularios crear/editar
+├── app.config.ts                  # Configuración
+├── app.routes.ts                  # Definición de rutas
+└── app.ts                         # Componente raíz
+```
+
+## Tecnologías utilizadas
+
+- Angular 19
+- TypeScript 5.6
+- Bootstrap 5.3
+- RxJS (Observables)
+- Angular Reactive Forms
+
+## Autor
+
+Desarrollado como proyecto académico para el curso FullStack Developer.
